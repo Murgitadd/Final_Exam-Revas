@@ -8,6 +8,7 @@ using System.Drawing;
 
 namespace Revas.Areas.Admin.Controllers
 {
+    [Area("Admin")]
     public class PortfolioController : Controller
     {
         private readonly AppDbContext _db;
@@ -71,9 +72,9 @@ namespace Revas.Areas.Admin.Controllers
                 ModelState.AddModelError("Photo", "Only images allowed");
                 return View(vm);
             }
-            Portfolio portfolio = new Portfolio();
+            Portfolio portfolio = new Portfolio()
             {
-                //Image = await vm.Photo.CreateFile(_env.WebRootPath, "assets", "img");   :((( Image deyir taypdı dirəşib əməlli başdı
+                Image = await vm.Photo.CreateFile(_env.WebRootPath, "assets", "img")
             };
             await _db.Portfolios.AddAsync(portfolio);
             await _db.SaveChangesAsync();

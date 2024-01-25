@@ -38,25 +38,36 @@
                     <li><a href="#portfolio">PORTFOLIO</a></li>
                     <li><a href="#about">ABOUT</a></li>
                     <li><a href="#contact">CONTACT</a></li>
+                    @if (User.Identity.IsAuthenticated)
+                    {
+                        <li><a href="#about">@User.Identity.Name</a></li>
+                        <li><a asp-controller="account" asp-action="logout" asp-area="admin">Logout</a></li>
+                        <li><a asp-controller="home" asp-action="index" asp-area="admin">Admin Panel</a></li>
+                    }
+                    else
+                    {
+                        <li><a asp-controller="account" asp-action="register" asp-area="admin">Register</a></li>
+                        <li><a asp-controller="account" asp-action="login" asp-area="admin">Login</a></li>
+                    }
                 </ul>
             </div>
 
         </div>
     </div>
-            @RenderBody()
-        <div id="footer">
-        2014 www.yourdomain.com | All Right Reserved  | Design by <a href="http://www.binarytheme.com/" target="_blank" >www.binarytheme.com</a>
-         
+    @RenderBody()
+    <div id="footer">
+        2014 www.yourdomain.com | All Right Reserved  | Design by <a href="http://www.binarytheme.com/" target="_blank">www.binarytheme.com</a>
+
     </div>
-     <!--FOOTER SECTION-->
+    <!--FOOTER SECTION-->
     <!-- JAVASCRIPT FILES PLACED AT THE BOTTOM TO REDUCE THE LOADING TIME  -->
     <!-- CORE JQUERY  -->
     <script src="~/assets/plugins/jquery-1.10.2.js"></script>
     <!-- BOOTSTRAP SCRIPTS  -->
     <script src="~/assets/plugins/bootstrap.js"></script>
-     <!-- EASING SCROLL SCRIPTS PLUGIN  -->
+    <!-- EASING SCROLL SCRIPTS PLUGIN  -->
     <script src="~/assets/plugins/jquery.easing.min.js"></script>
-     <!-- CUSTOM SCRIPTS   -->
+    <!-- CUSTOM SCRIPTS   -->
     <script src="~/assets/js/custom.js"></script>
 </body>
 </html>

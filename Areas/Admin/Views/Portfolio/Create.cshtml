@@ -1,0 +1,26 @@
+﻿@using Revas.Areas.Admin.ViewModels;
+@model CreatePortfolioVM
+<div class="content-wrapper">
+
+    <div class="row">
+        <div class="col-md-12 grid-margin">
+            <div class="col-12 grid-margin stretch-card">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Basic form elements</h4>
+                        
+                        <form class="forms-sample" method="post" enctype="multipart/form-data">
+                            <div class="form-group">
+                                <label asp-for="Photo">Image</label>
+                                <input class="form-control" asp-for="Photo">
+                                <span asp-validation-for="Photo"></span>
+                            </div>
+                            <button type="submit" class="btn btn-primary me-2">Submit</button>
+                            <button class="btn btn-light">Cancel</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
