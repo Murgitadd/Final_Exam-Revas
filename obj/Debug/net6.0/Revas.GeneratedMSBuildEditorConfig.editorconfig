@@ -16,8 +16,8 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\CA.R215.14\Desktop\Revas
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/CA.R215.14/Desktop/Revas/Areas/Admin/Views/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSW5kZXguY3NodG1s
+[C:/Users/CA.R215.14/Desktop/Revas/Areas/Admin/Views/AdminPanel/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5QYW5lbFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/CA.R215.14/Desktop/Revas/Views/Home/Index.cshtml]
