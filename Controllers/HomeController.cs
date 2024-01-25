@@ -1,26 +1,22 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Revas.Models;
-using System.Diagnostics;
+using Revas.DAL;
+using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
 
 namespace Revas.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
+        private readonly AppDbContext _context;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(AppDbContext context)
         {
-            _logger = logger;
+            _context = context;
         }
 
         public IActionResult Index()
         {
-            return View();
-        }
-
-        public IActionResult Privacy()
-        {
-            return View();
+            List<Model> model = new List<Model>();
+            return View(model);
         }
     }
 }
