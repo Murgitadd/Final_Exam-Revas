@@ -4,9 +4,9 @@ using Revas.Models;
 
 namespace Revas.DAL
 {
-    public class AppDbContext : IdentityDbContext<AppDbContext>
+    public class AppDbContext : IdentityDbContext<AppUser>
     {
-        public AppDbContext(DbContextOptions options) : base(options)
+        public AppDbContext(DbContextOptions<AppDbContext> opt) : base(opt)
         {
 
         }
